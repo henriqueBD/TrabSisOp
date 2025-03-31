@@ -61,24 +61,17 @@ locale-gen
   
 ## 4. Instalação do GNOME
 
-O GNOME foi escolhido devido ao seu design moderno, integração com Wayland e bom suporte a jogos. Para instalá-lo, executamos:
+O GNOME foi escolhido devido ao seu design moderno e bom suporte a jogos:
 
 ```bash
-# Instalar pacotes do GNOME
 pacman -S gnome gnome-extra
-
-# Habilitar o display manager (GDM)
 systemctl enable gdm.service
 ```
 
-### Decisão:
-- **GNOME completo**: Instalar o GNOME completo (gnome-extra) garante que todos os componentes do ambiente de desktop estejam disponíveis.
+- Instalar o GNOME completo (gnome-extra) garante que todos os componentes do ambiente de desktop estejam disponíveis.
 
 ## 5. Instalação de Drivers Gráficos e de Hardware
 
-Para garantir que o sistema tenha o melhor desempenho possível em jogos, a instalação dos drivers corretos para a GPU e outros componentes de hardware é essencial.
-
-### Decisão:
 - **Drivers Gráficos**:
   - utilizamos o pacote `nvidia`:
     ```bash
@@ -105,9 +98,7 @@ Para garantir que o sistema tenha o melhor desempenho possível em jogos, a inst
     systemctl enable cpupower.service
     ```
 
-## 7. Instalação de Softwares Essenciais para Jogos
-
-Além do ambiente gráfico e drivers, a instalação de software dedicado a jogos no Linux é importante. O principal software recomendado para jogos no Arch Linux é o **Steam**.
+## 7. Instalação de Softwares para Jogos
 
 ### Decisão:
 - **Steam**: O Steam é a plataforma de distribuição de jogos mais popular e oferece varios jogos nativos para linux.
@@ -115,11 +106,3 @@ Além do ambiente gráfico e drivers, a instalação de software dedicado a jogo
     ```bash
     pacman -S steam
     ```
-
-## 8. Conclusão
-
-A instalação manual do Arch Linux com GNOME é um processo que permite personalizar o sistema de acordo com as necessidades específicas do usuário, especialmente quando o foco é o desempenho em jogos. O Arch oferece flexibilidade e controle total sobre os pacotes instalados, enquanto o GNOME proporciona um ambiente de desktop moderno e fácil de usar.
-
-A escolha de pacotes como **Wine**, **Steam**, **Proton** e **Lutris**, junto com a instalação dos drivers gráficos corretos, assegura uma boa performance de jogos no Linux. A configuração do sistema também é otimizada para garantir a melhor experiência em jogos, com foco em desempenho gráfico e de CPU.
-
-O Arch Linux pode ser desafiador para iniciantes, mas a instalação manual oferece um sistema enxuto e altamente eficiente, ideal para quem busca um alto desempenho no universo dos jogos.
