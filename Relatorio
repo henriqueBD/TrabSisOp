@@ -73,10 +73,7 @@ Para garantir que o sistema tenha o melhor desempenho possível em jogos, a inst
 
 ## 6. Configurações para Jogos
 
-Para garantir uma boa performance de jogos, é fundamental otimizar alguns parâmetros e instalar pacotes que ajudam a melhorar o desempenho gráfico e de CPU.
-
-### Decisão:
-- **Instalação de Wine e Proton**: Esses pacotes são essenciais para rodar jogos desenvolvidos para Windows em um sistema Linux. A instalação do `wine` e do `proton` (via Steam) permite que jogos populares da plataforma Windows sejam jogados no Linux:
+- **Instalação de Wine e Proton**: Esses programas são essenciais para rodar jogos feitos para Windows em um sistema Linux.
     ```bash
     pacman -S wine wine-gecko wine-mono
     ```
@@ -91,15 +88,10 @@ Para garantir uma boa performance de jogos, é fundamental otimizar alguns parâ
 Além do ambiente gráfico e drivers, a instalação de software dedicado a jogos no Linux é importante. O principal software recomendado para jogos no Arch Linux é o **Steam**.
 
 ### Decisão:
-- **Steam**: O Steam é a plataforma de distribuição de jogos mais popular e oferece uma vasta gama de jogos nativos para Linux, além do Proton para jogos Windows.
+- **Steam**: O Steam é a plataforma de distribuição de jogos mais popular e oferece varios jogos nativos para linux.
+- A steam tambem oferece o proton, mencionado anteriormente, que permite jogos de windows rodarem no linux
     ```bash
     pacman -S steam
-    ```
-
-- **Lutris**: Para jogos não disponíveis no Steam ou que exigem um gerenciamento adicional, o **Lutris** é uma excelente ferramenta para rodar jogos de diferentes plataformas, como Blizzard, Epic Games, entre outros.
-
-    ```bash
-    pacman -S lutris
     ```
 
 ## 8. Conclusão
