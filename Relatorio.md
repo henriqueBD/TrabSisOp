@@ -1,4 +1,4 @@
-# Relatório sobre a Instalação Manual do Arch Linux com GNOME em um PC Focado em Jogos
+# Relatório sobre a Instalação do Arch Linux com GNOME em um PC Focado em Jogos
 
 Este relatório descreve o processo de instalação do Arch Linux com o ambiente de desktop GNOME em um PC focado em jogos.
 
@@ -29,7 +29,8 @@ Este relatório descreve o processo de instalação do Arch Linux com o ambiente
 ## 2. Particionamento e Formatação
 
 ### Decisão:
-- O sistema de arquivos **ext4** foi escolhido pela sua robustez e desempenho.
+- O sistema de arquivos **ext4** foi escolhido pela sua robustez e desempenho, alem de suporte a grandes volumes e arquivos.
+- sistemas mais diversos e seguros como Btrfs e ZFS possuem diferentes vantagens (como snapshots, verificação de integridade e criptografia), que não são prioridade
 - **Particionamento**: Para a instalação do Arch, criamos duas partições principais:
   - Uma partição **/boot** para o carregador de inicialização.
   - Uma partição **/ (root)** para o sistema base, onde o Arch e todos os jogos serão instalados.
@@ -55,13 +56,13 @@ echo "Hudfilho" > /etc/hostname
 ln -sf /usr/share/zoneinfo/Brazil/East /etc/localtime
 locale-gen
 ```
-
-### Decisão:
-- **Instalação mínima**: Começar com uma instalação mínima é crucial para garantir que apenas os pacotes essenciais sejam instalados, evitando a sobrecarga do sistema.
   
 ## 4. Instalação do GNOME
 
-O GNOME foi escolhido devido ao seu design moderno e bom suporte a jogos:
+O GNOME foi escolhido devido: 
+ - ao seu design moderno e minimalista
+ - robousto, com poucas chances de problemas virem da interface grafica
+ - suporte com Wayland (protocolo de servidor. Melhora o desempenho, segurança e simplicidade)
 
 ```bash
 pacman -S gnome gnome-extra
@@ -78,13 +79,12 @@ systemctl enable gdm.service
     pacman -S nvidia nvidia-utils
     ```
 
-- **Drivers de Som**: Para o áudio, instalamos o `pulseaudio` e o `pavucontrol`, que oferecem uma configuração de som ideal para a maioria dos jogos.
-
 - **Drivers de Rede**: Para garantir que a conectividade de rede seja eficiente, instalamos `networkmanager`:
     ```bash
     pacman -S networkmanager
     systemctl enable NetworkManager
     ```
+    - networkmanager é um pouco mais lento comparado com systemd-networkd ou ConnMan, mas ele possui mais funcionalidade como VPN
 
 ## 6. Configurações para Jogos
 
