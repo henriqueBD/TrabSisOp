@@ -7,36 +7,24 @@ Este relatório descreve o processo de instalação do Arch Linux com o ambiente
 **Passos para Configuração da Máquina Virtual**
 
 ### 1.1 **Criação da Máquina Virtual**
-- **Nome**: Arch Linux
 - **Tipo**: Linux
 - **Versão**: Arch Linux (64-bit)
-- **Memória**: 2 GB (mínimo recomendado 4 GB)
-- **Disco Rígido**: Criar um disco virtual de 20 GB ou mais, com formato VDI (VirtualBox) ou VMDK (VMware).
+- **Memória**: 4 GB
+- **Disco Rígido**: Aproximadamente 20 GB
+- **Processador**: 2 Nucleos
+- (obs) Essas foram as configurações que usamos no nosso exemplo, mas para jogos pesados, é necessario maior espaço de disco e nucleos
 
 ### 1.2 **Configuração de Rede**
-- **Adaptador de Rede**: Configurar para usar NAT (para conexão automática com a internet).
+- **Adaptador de Rede**: Configurar para usar NAT.
 
 ### 1.3 **Adição da Imagem ISO**
 - **Configuração de Inicialização**: Inserir a imagem ISO do Arch Linux no drive de CD/DVD da VM.
 
-### 1. **Baixar a ISO do Arch Linux**
-   - Acesse o [site oficial do Arch Linux](https://www.archlinux.org/download/) e baixe a ISO mais recente.
-
-### 2. **Configuração da Máquina Virtual**
-   - Crie uma nova máquina virtual (VM) usando o software de virtualização de sua preferência (VirtualBox, VMware, etc.).
-   - Alocar pelo menos:
-     - 2 GB de RAM (recomendado 4 GB)
-     - 20 GB de espaço em disco (mínimo)
-     - Processador com 2 núcleos ou mais.
+### 1.3 **Baixar a ISO do Arch Linux**
+   - disponivel em https://www.archlinux.org/download/.
    
-### 3. **Configurar a ISO como Disco de Inicialização**
-   - No software de virtualização, configure a máquina virtual para inicializar a partir da ISO do Arch Linux que você baixou.
-
-### 4. **Ajuste de Rede**
-   - Garanta que a máquina virtual tenha acesso à internet via rede NAT ou Bridge.
-
-### 5. **Iniciar a Instalação**
-   - Inicie a máquina virtual e abra um terminal para começar o processo de instalação do Arch Linux.
+### 1.4 **Configurar a ISO como Disco de Inicialização**
+   - No software de virtualização, colocamos a máquina virtual para inicializar a partir da ISO do Arch Linux baixada
 
 ## 2. Particionamento e Formatação
 
