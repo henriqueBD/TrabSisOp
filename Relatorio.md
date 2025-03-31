@@ -69,7 +69,7 @@ pacman -S gnome gnome-extra
 systemctl enable gdm.service
 ```
 
-- Instalar o GNOME completo (gnome-extra) garante que todos os componentes do ambiente de desktop estejam disponíveis.
+- Instalar o gnome-extra que garante que todos os componentes do ambiente de desktop estejam disponíveis.
 
 ## 5. Instalação de Drivers Gráficos e de Hardware
 
